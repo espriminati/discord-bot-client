@@ -1,0 +1,203 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #DDD;
+	font-size: 16px;
+}
+ul{
+	padding: 5px;
+}
+div.login{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 5;
+	background-color: #000;
+}
+div.login h1{
+	text-align: center;
+}
+div.login p{
+	text-align: center;
+}
+div.login input{
+	position: relative;
+	width: 95%;
+	left: 2.5%;
+	color: #000;
+	text-align: center;
+}
+div.login button{
+	position: relative;
+	width: 96%;
+	left: 2.5%;
+	color: #000;
+	text-align: center;
+}
+div.servers{
+	position: absolute;
+	left: 0;
+	top:0px;
+	width: 75px;
+	background-color: #23272A;
+	height: 100vh;
+	overflow: hidden;
+}
+div.servers ul li{
+	list-style-type: none;
+	padding: 5px;
+	border:1px solid #DDD;
+	border-radius: 50px;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 10px;
+}
+div.servers ul li img{
+	clip-path: url(#server);
+	margin-top: -3px;
+	margin-left: -3px;
+}
+div.channels{
+	position: absolute;
+	left: 75px;
+	top:0px;
+	width: 240px;
+	background-color: #2c2f33;
+	height: 100vh;
+}
+div.current-server{
+	position: absolute;
+	top: 0px;
+	width:100%;
+	border-bottom: 2px solid #242529;
+	height: 48px;
+}
+div.channels ul{
+	list-style-type: none;
+	padding-left: 20px;
+	margin:5px;
+	margin-top: 60px;
+}
+div.channels ul li button{
+	background-color: #2c2f33;
+	width:100%;
+	border:none;
+	margin-bottom: 5px;
+	height: 30px;
+	text-align: left;
+}
+
+div.channels ul li button:active{
+	background-color: #292b2f;
+}
+div.channels ul li button:hover{
+	background-color: #292b2f;
+}
+
+div.user-info{
+	border-top: 2px solid #242529;
+	position: absolute;
+	bottom: 0px;
+	z-index: 2;
+	background-color: #292b2f;
+	width: 240px;
+	height: 53px;
+}
+div.user-info p{
+	margin:7px;
+}
+div.user-info .user-numbers{
+	font-size: 80%;
+	color: #9ea4b5;
+}
+div.users{
+	right:0px;
+	position: absolute;
+	width:240px;
+	background-color: #2c2f33;
+	height: 100vh;
+}
+div.users ul{
+	padding-left: 20px;
+}
+div.messages{
+	position: absolute;
+	left: 315px;
+	right:240px;
+	background-color: #36393f;
+	top:0px;
+	height: 100vh;
+}
+div.messages #current-channel{
+	overflow: hidden;
+}
+div.messages .channel-name{
+	position: absolute;
+	top: 0px;
+	width:100%;
+	border-bottom: 2px solid #2c2e33;
+	height: 48px;
+	background-color: #36393f;
+}
+div.messages .channel-name *{
+	display: inline;
+	line-height: 48px;
+	padding-left: 20px;
+}
+div.messages ul{
+	overflow-y: scroll;
+	position: absolute;
+	top:50px;
+	bottom:50px;
+	left:0px;
+	right:0px;
+}
+div.messages ul li{
+	padding: 10px;
+	margin: 3px;
+	list-style-type: none;
+	border-bottom: 1px solid #42454a;
+}
+div.messages ul li.mention{
+	border-left: 3px solid yellow;
+	background-color: darkorange;
+	border-radius: 5px;
+	padding: 3px;
+}
+div.messages ul li a{
+	background-color: #22399A;
+	color: #7289DA;
+	
+}
+div.messages ul li.user-joined{
+	color: green;
+}
+div.messages ul li.user-left{
+	color: red;
+}
+div.send-message-form{
+	position: absolute;
+	bottom: 0px;
+	z-index: 2;
+	width:100%;
+	height: 50px;
+}
+div.send-message-form input{
+	background-color: #40444b;
+	border: 1px solid #36393f;
+	border-radius: 10px;
+	width: 97%;
+	height: 90%;
+}
+div.send-message-form button{
+	background-color: #40444b;
+	border: 1px solid #36393f;
+	border-radius: 10px;
+	float: right;
+	display: none;
+}
+body{
+	margin:0px;
+	padding: 0px;
+}
