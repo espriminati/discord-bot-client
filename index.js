@@ -63,10 +63,24 @@ app.on('ready', function(){
 	ready = true;
 })
 
+function addUsers(guild){
+	clearUsers();
+	guild.members.forEach((member) => {
+		var status = "";
+		if (member.presence.game != null){
+			if (member.presence.game.type == 0) status = "Playing ";
+			else if (member.presence.game.type == 1) status = "Streaming ";
+			else if (member.presence.game.type == 2) status = "Listening ";
+			else if (member.presence.game.type == 3) status = "Watching ";
+			status += member.presence.game.name;
+		}
+		addUser(member.displayName, status)
+	});
+}
 
 
 function sendMessage(channelID, message){
-	channel = _cli.channels.find("id", channelID);
+	channel = _cli.channels.find(x => x.id == channelID);
 	channel.send(message);
 	appWindow.webContents.send('clearInput');
 }
@@ -77,7 +91,7 @@ function clearServers(){
 	appWindow.webContents.send('clearServers');
 }
 function addChannel(name, id){
-	appWindow.webContents.send('addChannel', name, id);
+	appWindow.webContents.send('addChannel', "#" + name, id);
 }
 function clearChannels(){ 
 	appWindow.webContents.send('clearChannels');
@@ -112,4 +126,5 @@ ipcMain.on("changeServer", (event, serverID) => {
 		if (channel.type == "text")
 		addChannel(channel.name,channel.id);
 	});
+	addUsers(server);
 });
