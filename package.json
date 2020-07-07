@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "electron": "^7.0.0"
+    "electron": "^7.2.4"
   }
 }
